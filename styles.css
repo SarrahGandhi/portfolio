@@ -47,7 +47,7 @@ nav > a:active {
   text-decoration: underline;
   text-decoration-thickness: 5px;
   text-decoration-color: #ffea00;
-  text-underline-offset: 4px;
+  text-underline-offset: 10px;
   font-weight: bold;
 }
 
@@ -147,8 +147,25 @@ aside {
 }
 #portfolio h2 {
   text-align: center;
+  font-size: 80px;
 }
 
+/* Porfolio boxes */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+}
+.portfolio-block {
+  flex: 1 1 30%;
+  border: 2px solid #000;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px;
+  gap: 10px;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+}
 /* Footer section  */
 .footer {
   display: flex;
