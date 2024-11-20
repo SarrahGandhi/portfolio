@@ -11,10 +11,12 @@
     <!-- Header Section -->
     <header class="header">
       <nav class="navigation">
-        <a href="#sarrahgandhi" class="nav-link">sarrah_gandhi</a>
-        <a href="#about" class="nav-link">About//</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Resume</a>
+          <a href="#sarrahgandhi" class="nav-link">sarrah_gandhi</a>
+          <a href="#about" class="nav-link">About//</a>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+          <a href="#services" class="nav-link">Resume</a>
+          <img src="icons/Menu.png" alt="hamburger menu" />
+        </div>
       </nav>
       <div class="corner-box top-left"></div>
       <div class="corner-box top-right"></div>
@@ -46,7 +48,7 @@
         <div class="container">
           <div class="portfolio-block">
             <img
-              src="your-image.jpg"
+              src="images/Graphic+Design+Shape+Elements-01.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
@@ -60,7 +62,7 @@
           </div>
           <div class="portfolio-block">
             <img
-              src="your-image.jpg"
+              src="images/Graphic+Design+Shape+Elements-01.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
@@ -74,7 +76,7 @@
           </div>
           <div class="portfolio-block">
             <img
-              src="your-image.jpg"
+              src="images/Graphic+Design+Shape+Elements-01.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
@@ -88,7 +90,7 @@
           </div>
           <div class="portfolio-block">
             <img
-              src="your-image.jpg"
+              src="images/Graphic+Design+Shape+Elements-01.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
@@ -102,7 +104,7 @@
           </div>
           <div class="portfolio-block">
             <img
-              src="your-image.jpg"
+              src="images/Graphic+Design+Shape+Elements-01.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
@@ -116,7 +118,7 @@
           </div>
           <div class="portfolio-block">
             <img
-              src="your-image.jpg"
+              src="images/Graphic+Design+Shape+Elements-01.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
@@ -134,33 +136,79 @@
 
       <section id="review">
         <h2>Here’s what my clients are saying about my work</h2>
-        <div class="review-text">
+        <div class="review-text fade">
           <h4>“Design is a bridge that connects everyone and everything”</h4>
           <p>Client Name, Company name</p>
         </div>
+        <!-- <div class="review-text fade">
+          <h4>“Design is a bridge that connects everyone and everything”</h4>
+          <p>Client Name 2, Company name</p>
+        </div>
+        <div class="review-text fade">
+          <h4>“Design is a bridge that connects everyone and everything”</h4>
+          <p>Client Name 3, Company name</p>
+        </div>
+        <div class="review-text fade">
+          <h4>“Design is a bridge that connects everyone and everything”</h4>
+          <p>Client Name 3, Company name</p>
+        </div> -->
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+The dots/circles
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div> -->
       </section>
 
       <!-- Contact Form Section -->
       <section id="contact" class="contact-section">
-        <h2>Here's how you reach me</h2>
+        <div class="contact-info">
+          <h2>Here's how you reach me</h2>
+          <div class="line"></div>
+          <!-- <div class="email">Reach me atthesarrahgandhi@gmail.com</div> -->
+        </div>
         <form class="contact-form" onsubmit="return validateForm()">
           <label for="name">Name...</label>
-          <input type="text" id="name" name="name" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your name"
+          />
 
           <label for="email">Email...</label>
-          <input type="email" id="email" name="email" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your email"
+          />
 
           <label for="message">your Message...</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            rows="7"
+            required
+            placeholder="Enter your message"
+          ></textarea>
 
           <button type="submit">Send Message</button>
         </form>
       </section>
     </main>
-
+    <!-- <script src="script.js"></script> -->
     <!-- Footer -->
     <footer class="footer">
-      <p>&copy; 2024 Sarrah Gandhi. All rights reserved.</p>
+      <p>&copy; sarrah_gandhi</p>
+      <p>Portfolio 2024</p>
+      <p>All rights reserved.</p>
     </footer>
   </body>
 </html>
