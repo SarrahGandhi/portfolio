@@ -1,38 +1,32 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+function menuClick() {
+  console.log("Clicked menu");
+  // const element = document.getElementById("menu");
+  // element.classList.toggle("underline");
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+  const menuOption = document.getElementById("menuOption");
+  menuOption.classList.toggle("hidden");
 }
+window.onload = validateForm;
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+function validateForm() {
+  const formhandle = document.forms["contact-form"];
+  const message = document.getElementById("result"); // Corrected this line
+  formhandle.onsubmit = processForm;
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("review-text");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
+  function processForm() {
+    if (formhandle.name.value === "") {
+      formhandle.name.focus();
+      return false; // Prevent the form submission
+    }
+    if (formhandle.email.value === "") {
+      formhandle.email.focus();
+      return false; // Prevent the form submission
+    }
+    if (formhandle.message.value === "") {
+      formhandle.message.focus();
+      return false; // Prevent the form submission
+    }
+    message.style.display = "block";
+    return false; // Prevent the form submission
   }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
 }
-document
-  .querySelector(".hamburger-menu")
-  .addEventListener("click", function () {
-    const menuOptions = document.querySelector(".menu-options");
-    menuOptions.classList.toggle("active");
-  });

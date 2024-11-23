@@ -3,19 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Sarrah Gandhi</title>
+    <title>Sarrah Gandhi's Portfolio</title>
+    <link rel="icon" type="favicon" href="icons/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
   </head>
 
   <body>
     <!-- Header Section -->
     <header class="header">
-      <nav class="navigation">
-          <a href="#sarrahgandhi" class="nav-link">sarrah_gandhi</a>
-          <a href="#about" class="nav-link">About//</a>
+      <nav class="navigation" style="overflow: hidden">
+        <a href="#sarrahgandhi" class="nav-link">sarrah_gandhi</a>
+        <a href="#portfolio" class="nav-link">Portfolio//</a>
+        <a href="#review" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#menu" id="menu" class="nav-link" onclick="menuClick()">
+          <img src="icons/Menu.png" alt="hamburger menu"
+        /></a>
+        <div id="menuOption" class="menu-options hidden">
           <a href="#portfolio" class="nav-link">Portfolio</a>
-          <a href="#services" class="nav-link">Resume</a>
-          <img src="icons/Menu.png" alt="hamburger menu" />
+          <a href="#review" class="nav-link">Reviews</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </div>
       </nav>
       <div class="corner-box top-left"></div>
@@ -28,7 +36,7 @@
       <section id="home" class="hero-section">
         <div class="hero-text">
           <h1>I design top notch websites</h1>
-          <button>See Portfolio</button>
+          <button><a href="#portfolio">See Portfolio</a></button>
         </div>
         <aside class="photo">
           <img src="images/photo_frame.png" alt="Sarrah Gandhi" />
@@ -37,10 +45,11 @@
 
       <div class="languages">
         <p>Figma</p>
-        <p>JS</p>
-        <p>Webdesign</p>
+        <p>JavaScript</p>
+        <p>HTML</p>
+        <p>CSS</p>
         <p>GIT</p>
-        <p>UXDesign</p>
+        <p>Adobe Suite</p>
       </div>
 
       <section id="portfolio">
@@ -48,85 +57,84 @@
         <div class="container">
           <div class="portfolio-block">
             <img
-              src="images/Graphic+Design+Shape+Elements-01.png"
+              src="images/slaycoffeelogo.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
             <div class="portfolio-text">
-              <h3>Project Title</h3>
+              <h3>Slay Coffee</h3>
               <p>
-                Brief description of the project or any additional details you'd
-                like to include here.
+                Slay Coffee is a premium coffee brand catering to minimalists.
+                Work includes designing the brand identity, packaging, and
+                website.
               </p>
             </div>
           </div>
           <div class="portfolio-block">
             <img
-              src="images/Graphic+Design+Shape+Elements-01.png"
+              src="images/vayuvillalogo.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
             <div class="portfolio-text">
-              <h3>Project Title</h3>
+              <h3>Vayu Villa</h3>
               <p>
-                Brief description of the project or any additional details you'd
-                like to include here.
+                The website showcases the resort's elegance and highlights its
+                offerings through intuitive navigation, stunning visuals, and an
+                easy-to-use booking system
               </p>
             </div>
           </div>
           <div class="portfolio-block">
             <img
-              src="images/Graphic+Design+Shape+Elements-01.png"
+              src="images/typography.webp"
               alt="Portfolio Image"
               class="portfolio-image"
             />
             <div class="portfolio-text">
-              <h3>Project Title</h3>
+              <h3>Experimental Typography</h3>
               <p>
-                Brief description of the project or any additional details you'd
-                like to include here.
+                An experimental project focusing on typographic storytelling.
+                Each piece blends text and motion to convey emotion:
               </p>
             </div>
           </div>
           <div class="portfolio-block">
             <img
-              src="images/Graphic+Design+Shape+Elements-01.png"
+              src="images/recipefinder.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
             <div class="portfolio-text">
-              <h3>Project Title</h3>
+              <h3>BreadCrumbs - Recipe Finder</h3>
               <p>
-                Brief description of the project or any additional details you'd
-                like to include here.
+                A web app that suggests recipes based on available ingredients,
+                helping users discover meals with minimal waste.
               </p>
             </div>
           </div>
           <div class="portfolio-block">
             <img
-              src="images/Graphic+Design+Shape+Elements-01.png"
+              src="images/illustrations 1.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
             <div class="portfolio-text">
-              <h3>Project Title</h3>
-              <p>
-                Brief description of the project or any additional details you'd
-                like to include here.
-              </p>
+              <h3>Illustrations</h3>
+              <p>Making illustrations using adobe illustrator and photoshop</p>
             </div>
           </div>
           <div class="portfolio-block">
             <img
-              src="images/Graphic+Design+Shape+Elements-01.png"
+              src="images/portfolio.png"
               alt="Portfolio Image"
               class="portfolio-image"
             />
             <div class="portfolio-text">
-              <h3>Project Title</h3>
+              <h3>Portfolio Website</h3>
               <p>
-                Brief description of the project or any additional details you'd
-                like to include here.
+                A website that showcases portfolio using html, css and
+                javascript.
               </p>
             </div>
           </div>
@@ -171,7 +179,12 @@ The dots/circles
           <div class="line"></div>
           <!-- <div class="email">Reach me atthesarrahgandhi@gmail.com</div> -->
         </div>
-        <form class="contact-form" onsubmit="return validateForm()">
+        <form
+          name="contact-form"
+          id="contact-form"
+          class="contact-form"
+          onsubmit="return validateForm()"
+        >
           <label for="name">Name...</label>
           <input
             type="text"
@@ -200,6 +213,9 @@ The dots/circles
           ></textarea>
 
           <button type="submit">Send Message</button>
+          <div id="result">
+            <h3 id="msg">Thank you for contacting me!</h3>
+          </div>
         </form>
       </section>
     </main>
@@ -208,7 +224,19 @@ The dots/circles
     <footer class="footer">
       <p>&copy; sarrah_gandhi</p>
       <p>Portfolio 2024</p>
-      <p>All rights reserved.</p>
+      <div class="icons">
+        <a href="https://www.instagram.com/sarrahgandhi_/" target="_blank"
+          ><img src="icons/instagram.png" alt="instagram"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/sarrah-gandhi-914a53227/"
+          target="_blank"
+          ><img src="icons/linkedin.png" alt="linkedin"
+        /></a>
+        <a href="https://github.com/SarrahGandhi" target="_blank"
+          ><img src="icons/github.png" alt="github"
+        /></a>
+      </div>
     </footer>
   </body>
 </html>
