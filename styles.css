@@ -160,6 +160,43 @@ aside {
   width: 100%;
   margin-right: 100px;
 }
+.project-button {
+  display: inline-flex;
+
+  justify-content: center;
+  padding: 5px 10px;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text (the arrow will be white) */
+  font-size: 24px; /* Arrow size */
+  text-decoration: none;
+  border: 2px solid #000; /* Black border */
+  align-items: right;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-button .arrow {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+  transform: rotate(320deg);
+}
+
+.project-button:hover {
+  background-color: #ffea00; /* Light yellow on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow on hover */
+}
+.project-button:active {
+  background-color: #ffea00; /* Light yellow on click */
+  transform: scale(0.98); /* Shrink effect when clicked */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Darker shadow on click */
+}
+
+.project-button:hover .arrow {
+  transform: translateX(5px); /* Arrow moves slightly to the right on hover */
+}
+
 .languages {
   display: flex;
   flex-direction: row;
